@@ -227,7 +227,12 @@ html,body {
 	left: 240px;
 }
 
-
+.sun {
+	background-color: #ffe900;
+	box-shadow: 0 0 10px #ffe900;
+	transform: translatey(200px);
+	opacity: 0;
+}
 
 .moon {
 	box-shadow: inset 20px -10px #fff;
@@ -247,4 +252,32 @@ html,body {
 
 * {
 	transition: 2s;
+}
+
+input:checked + .scene{
+	background-size: 100% 100%;
+	.moon {
+		transform: translatey(-100px);
+		opacity: 0;
+	}
+	.allStars {
+		display:none;
+	}
+	.sun {
+		transform:translatey(0);
+		opacity:1;
+	}
+	.night {
+		display:none;
+	}
+	.day {
+		display:block;
+	}
+	.blueBlock {
+		background-color: #fff;
+	}
+}
+
+input {
+	display:none;
 }
